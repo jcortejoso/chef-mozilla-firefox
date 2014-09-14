@@ -21,3 +21,9 @@ ark 'firefox' do
   extension "tar.bz2"
   has_binaries ['firefox']
 end
+
+node['mozilla-firefox']['dependencies'].each do |dep|
+  package dep do
+    action :install
+  end
+end

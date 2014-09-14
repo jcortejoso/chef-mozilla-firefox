@@ -4,7 +4,7 @@ This cookbook installs a build of Firefox from Mozilla
 
 ## Supported Platforms
 
-* Linux
+* Ubuntu
 
 ## Attributes
 
