@@ -1,7 +1,9 @@
 source 'https://rubygems.org'
  
-gem 'berkshelf'
-gem 'test-kitchen'
-gem 'kitchen-vagrant'
-gem 'chefspec'
-gem 'foodcritic'
+group :test do
+  gem 'berkshelf'
+  gem 'test-kitchen'
+  gem 'kitchen-vagrant'
+  gem 'chefspec'
+  gem 'foodcritic'
+end
