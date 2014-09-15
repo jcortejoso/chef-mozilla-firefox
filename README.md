@@ -2,6 +2,8 @@
 
 This cookbook installs a build of Firefox from Mozilla
 
+![Build Status](https://travis-ci.org/lonelyplanet/chef-mozilla-firefox.svg?branch=master)
+
 ## Supported Platforms
 
 * Ubuntu
