@@ -35,6 +35,12 @@ This cookbook installs a build of Firefox from Mozilla
     <td>Language to install</td>
     <td><tt>en-US</tt></td>
   </tr>
+  <tr>
+    <td><tt>['mozilla-firefox']['url']</tt></td>
+    <td>String</td>
+    <td>Override source URL</td>
+    <td><tt>https://download.mozilla.org/?product=firefox-#{version}-SSL&os=#{os}&lang=#{language}</tt></td>
+  </tr>
 </table>
 
 ## Usage
