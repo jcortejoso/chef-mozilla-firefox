@@ -12,7 +12,7 @@ else
   os = 'linux'
 end
 
-url = "https://download.mozilla.org/?product=firefox-#{version}-SSL&os=#{os}&lang=#{lang}"
+url = node['mozilla-firefox']['url'] || "https://download.mozilla.org/?product=firefox-#{version}-SSL&os=#{os}&lang=#{lang}"
 
 ark 'firefox' do
   action :install
