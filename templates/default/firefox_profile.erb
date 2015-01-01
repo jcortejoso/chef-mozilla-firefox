@@ -1,0 +1,5 @@
+<% if node['mozilla-firefox']['crash-reporter'] %>
+export MOZ_CRASHREPORTER_DISABLE=1
+<% else %>
+export MOZ_CRASHREPORTER_DISABLE=0
+<% end %>

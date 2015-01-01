@@ -22,20 +22,18 @@ ark 'firefox' do
   has_binaries ['firefox']
 end
 
-if node['mozilla-firefox']['crash-reporter']
-  directory node['mozilla-firefox']['profile_dir'] do
-    action 'create'
-    not_if { File.directory?(node['mozilla-firefox']['profile_dir']) }
-  end
-  template "#{node['mozilla-firefox']['profile_dir']}/#{node['mozilla-firefox']['profile_file']}" do
-    source 'firefox_profile.erb'
-    owner 'root'
-    group 'root'
-    mode '0644'
-  end
-  bash 'reload_profile' do
-    code "source #{node['mozilla-firefox']['profile_dir']}/#{node['mozilla-firefox']['profile_file']}"
-  end
+directory node['mozilla-firefox']['profile_dir'] do
+  action 'create'
+  not_if { File.directory?(node['mozilla-firefox']['profile_dir']) }
+end
+template "#{node['mozilla-firefox']['profile_dir']}/#{node['mozilla-firefox']['profile_file']}" do
+  source 'firefox_profile.erb'
+  owner 'root'
+  group 'root'
+  mode '0644'
+end
+bash 'reload_profile' do
+  code "source #{node['mozilla-firefox']['profile_dir']}/#{node['mozilla-firefox']['profile_file']}"
 end
 
 node['mozilla-firefox']['dependencies'].each do |dep|
