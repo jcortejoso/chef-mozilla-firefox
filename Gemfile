@@ -6,4 +6,5 @@ group :test do
   gem 'kitchen-vagrant'
   gem 'chefspec'
   gem 'foodcritic'
+  gem 'kitchen-docker'
 end
