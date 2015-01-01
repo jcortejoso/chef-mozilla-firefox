@@ -8,6 +8,8 @@ provisioner:
 
 platforms:
   - name: ubuntu-12.04
+    driver_config: 
+      provision_command: apt-get -y install bzip2
 
 suites:
   - name: default
